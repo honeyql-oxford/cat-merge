@@ -1,7 +1,7 @@
-﻿const test = require("node:test");
+const test = require("node:test");
 const assert = require("node:assert/strict");
 
-const { Board } = require("../../scripts/core/Board");
+const { Board } = require("../../assets/scripts/core/Board");
 
 test("initBoard creates an empty 4x4 board", () => {
   const board = new Board();
@@ -89,3 +89,4 @@ test("invalid coordinates and levels throw in direct cell access", () => {
   assert.throws(() => board.setCell(0, 4, 1), RangeError);
   assert.throws(() => board.setCell(0, 0, 7), RangeError);
 });
+
